@@ -10,9 +10,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.yaowen.radiogroupcheckbox.test.TableLayoutStudy;
+
 public class MainActivity extends AppCompatActivity {
     private RadioGroup mRadioGroup;
-    private Button nextPloblem;
+    private Button nextPloblem,tableLayoutStudy;
     private RadioButton mRadio1, mRadio2, mRadio3, mRadio4;
 
     @Override
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mRadio3 = (RadioButton) findViewById(R.id.radio3);
         mRadio4 = (RadioButton) findViewById(R.id.radio4);
         nextPloblem= (Button) findViewById(R.id.nextPloblemButton);
+        tableLayoutStudy= (Button) findViewById(R.id.tableLayouStudyButton);
         mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -39,8 +42,17 @@ public class MainActivity extends AppCompatActivity {
         nextPloblem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(MainActivity.this,SecondActivity.class);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        tableLayoutStudy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TableLayoutStudy.class);
                 startActivity(intent);
                 finish();
             }

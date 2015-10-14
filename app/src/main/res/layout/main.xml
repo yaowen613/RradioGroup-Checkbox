@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <RadioGroup
@@ -45,4 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="下一道"/>
-</LinearLayout>
+    <Button
+        android:id="@+id/tableLayouStudyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="表格布局学习"/>
+</TableLayout>
