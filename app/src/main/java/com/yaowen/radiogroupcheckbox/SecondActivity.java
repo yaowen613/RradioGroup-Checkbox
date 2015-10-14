@@ -29,7 +29,7 @@ public class SecondActivity extends Activity{
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayToast("已经是最后一道题了！");
+                displayToast("已经是最后一道单选题了！");
                 Intent intent=new Intent();
                 intent.setClass(SecondActivity.this,CheckboxActivity.class);
                 startActivity(intent);

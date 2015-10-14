@@ -50,4 +50,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="获取值" />
+    <Button
+        android:id="@+id/back3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回上一页"/>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.yaowen.radiogroupcheckbox;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -16,13 +17,14 @@ import java.util.List;
 public class CheckboxActivity extends AppCompatActivity {
     private CheckBox youyong, paobu, pingpangqiu, tiaoyuan;
     private List<CheckBox> checkBoxes = new ArrayList<CheckBox>();
-    private Button getValueButton;
+    private Button getValueButton,back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checkbox);
         getValueButton= (Button) findViewById(R.id.getValueButto);
+        back= (Button) findViewById(R.id.back3);
         youyong = (CheckBox) findViewById(R.id.checkbox_youyong);
         paobu = (CheckBox) findViewById(R.id.checkbox_paobu);
         pingpangqiu = (CheckBox) findViewById(R.id.checkbox_pingpangqiu);
@@ -38,6 +40,14 @@ public class CheckboxActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getValue(v);
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(CheckboxActivity.this,SecondActivity.class);
+                startActivity(i);
+                finish();
             }
         });
         //OnCheckBoxClickListener listener = new OnCheckBoxClickListener();
