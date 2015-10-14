@@ -30,6 +30,10 @@ public class SecondActivity extends Activity{
             @Override
             public void onClick(View v) {
                 displayToast("已经是最后一道题了！");
+                Intent intent=new Intent();
+                intent.setClass(SecondActivity.this,CheckboxActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
