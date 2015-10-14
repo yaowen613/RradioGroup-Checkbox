@@ -1,14 +1,18 @@
 package com.yaowen.radiogroupcheckbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private RadioGroup mRadioGroup;
+    private Button nextPloblem;
     private RadioButton mRadio1, mRadio2, mRadio3, mRadio4;
 
     @Override
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mRadio2 = (RadioButton) findViewById(R.id.radio2);
         mRadio3 = (RadioButton) findViewById(R.id.radio3);
         mRadio4 = (RadioButton) findViewById(R.id.radio4);
+        nextPloblem= (Button) findViewById(R.id.nextPloblemButton);
         mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -31,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        nextPloblem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     /**
@@ -38,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param str String
      **/
-    private void displayToast(String str) {
+    public void displayToast(String str) {
         Toast toast = Toast.makeText(this, str, Toast.LENGTH_SHORT);
         //设置显示的位置
         toast.setGravity(Gravity.TOP, 0, 200);
