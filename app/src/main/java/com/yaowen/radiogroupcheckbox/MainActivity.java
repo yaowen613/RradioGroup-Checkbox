@@ -1,7 +1,8 @@
 package com.yaowen.radiogroupcheckbox;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -23,13 +24,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == mRadio2.getId()) {
-                    Toast.makeText(MainActivity.this, "正确答案：" + mRadio2.getText()
-                            + ",恭喜你，答对了！", Toast.LENGTH_SHORT).show();
+                    displayToast("正确答案：" + mRadio2.getText()
+                            + ",恭喜你，答对了！");
                 } else {
-                    Toast.makeText(MainActivity.this, "请注意，回答错误！",
-                            Toast.LENGTH_SHORT).show();
+                    displayToast("请注意，回答错误！");
                 }
             }
         });
+    }
+
+    /**
+     * 显示Toast提示信息，相当于自带Tosat.makeText（）的方法；toast showing;
+     *
+     * @param str String
+     **/
+    private void displayToast(String str) {
+        Toast toast = Toast.makeText(this, str, Toast.LENGTH_SHORT);
+        //设置显示的位置
+        toast.setGravity(Gravity.TOP, 0, 200);
+        //显示toast；
+        toast.show();
     }
 }
