@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RadioGroup&amp;CheckBox.iml" filepath="$PROJECT_DIR$/RadioGroup&amp;CheckBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RradioGroup-Checkbox.iml" filepath="$PROJECT_DIR$/RradioGroup-Checkbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
