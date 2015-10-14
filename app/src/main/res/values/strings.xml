@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RadioGroup&amp;CheckBox</string>
+    <string name="title_activity_checkbox">CheckboxActivity</string>
 </resources>
