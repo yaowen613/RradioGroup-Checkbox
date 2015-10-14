@@ -1,50 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <RadioGroup
-        android:id="@+id/radioGroup3"
+    <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你喜欢的运动时（）"
+        android:textSize="25sp" />
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:columnCount="6"
+        android:overScrollMode="always"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="你喜欢的运动时（）"
-            android:textSize="25sp" />
+    <CheckBox
+        android:id="@+id/checkbox_youyong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游泳1"
+        android:textSize="20sp" />
 
+    <CheckBox
+        android:id="@+id/checkbox_pingpangqiu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="乒乓球2"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_paobu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跑步3"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_tiaoyuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳远4"
+        android:textSize="20sp" />
         <CheckBox
-            android:id="@+id/checkbox_youyong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="游泳"
+            android:text="跳远5"
             android:textSize="20sp" />
-
         <CheckBox
-            android:id="@+id/checkbox_pingpangqiu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="乒乓球"
+            android:text="跳远6"
             android:textSize="20sp" />
-
         <CheckBox
-            android:id="@+id/checkbox_paobu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跑步"
+            android:text="跳远7"
             android:textSize="20sp" />
-
         <CheckBox
-            android:id="@+id/checkbox_tiaoyuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳远"
+            android:text="跳远8"
             android:textSize="20sp" />
-
-    </RadioGroup>
-
+    </GridLayout>
     <Button
         android:id="@+id/getValueButto"
         android:layout_width="wrap_content"
