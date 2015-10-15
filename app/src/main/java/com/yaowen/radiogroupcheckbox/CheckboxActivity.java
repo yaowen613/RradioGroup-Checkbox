@@ -14,19 +14,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckboxActivity extends AppCompatActivity {
-    private CheckBox youyong, paobu, pingpangqiu, tiaoyuan;
+    private CheckBox youyong, paobu, pingpangqiu, tiaoyuan,qiche,tubu,zhuoqiu,lanqiiu;
     private List<CheckBox> checkBoxes = new ArrayList<CheckBox>();
-    private Button getValueButton;
+    private Button getValueButton,setCheckAll,CheckBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checkbox);
         getValueButton= (Button) findViewById(R.id.getValueButto);
+        setCheckAll= (Button) findViewById(R.id.setCheckAll);
+        CheckBack= (Button) findViewById(R.id.setCheckBack);
         youyong = (CheckBox) findViewById(R.id.checkbox_youyong);
         paobu = (CheckBox) findViewById(R.id.checkbox_paobu);
         pingpangqiu = (CheckBox) findViewById(R.id.checkbox_pingpangqiu);
         tiaoyuan = (CheckBox) findViewById(R.id.checkbox_tiaoyuan);
+        qiche= (CheckBox) findViewById(R.id.checkbox_qiche);
+        tubu= (CheckBox) findViewById(R.id.checkbox_tubu);
+        zhuoqiu= (CheckBox) findViewById(R.id.checkbox_zhuoqiu);
+        lanqiiu= (CheckBox) findViewById(R.id.checkbox_lanqiu);
 
         // 默认选项
         youyong.setChecked(true);
@@ -40,17 +46,33 @@ public class CheckboxActivity extends AppCompatActivity {
                 getValue(v);
             }
         });
+       /* setCheckAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i=0;i<checkBoxes.size();i++){
+
+                }
+            }
+        });*/
         //OnCheckBoxClickListener listener = new OnCheckBoxClickListener();
         youyong.setOnCheckedChangeListener(listener);
         paobu.setOnCheckedChangeListener(listener);
         pingpangqiu.setOnCheckedChangeListener(listener);
         tiaoyuan.setOnCheckedChangeListener(listener);
+        qiche.setOnCheckedChangeListener(listener);
+        tubu.setOnCheckedChangeListener(listener);
+        zhuoqiu.setOnCheckedChangeListener(listener);
+        lanqiiu.setOnCheckedChangeListener(listener);
 
         // 添加到集合中
         checkBoxes.add(youyong);
         checkBoxes.add(paobu);
         checkBoxes.add(pingpangqiu);
         checkBoxes.add(tiaoyuan);
+        checkBoxes.add(qiche);
+        checkBoxes.add(zhuoqiu);
+        checkBoxes.add(tubu);
+        checkBoxes.add(lanqiiu);
 
     }
 

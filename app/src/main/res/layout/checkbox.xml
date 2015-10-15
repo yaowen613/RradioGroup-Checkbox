@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="你喜欢的运动时（）"
+        android:text="你喜欢的运动时（）？"
         android:textSize="25sp" />
 
     <HorizontalScrollView
@@ -24,59 +24,80 @@
                 android:id="@+id/checkbox_youyong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="游泳1"
+                android:text="游泳"
                 android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/checkbox_pingpangqiu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="乒乓球2"
+                android:text="乒乓球"
                 android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/checkbox_paobu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跑步3"
+                android:text="跑步"
                 android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/checkbox_tiaoyuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳远4"
+                android:text="跳远"
                 android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/checkbox_qiche"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳远5"
+                android:text="骑车"
                 android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/checkbox_tubu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳远6"
+                android:text="徒步"
                 android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/checkbox_zhuoqiu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳远7"
+                android:text="桌球"
                 android:textSize="20sp" />
 
             <CheckBox
+                android:id="@+id/checkbox_lanqiu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳远8"
+                android:text="篮球"
                 android:textSize="20sp" />
         </GridLayout>
     </HorizontalScrollView>
 
-    <Button
-        android:id="@+id/getValueButto"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="获取值" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getValueButto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取值" />
+
+        <Button
+            android:id="@+id/setCheckAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选" />
+        <Button
+            android:id="@+id/setCheckBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="反选"/>
+    </LinearLayout>
 </LinearLayout>
