@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.GridLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class CheckboxActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checkbox);
+        final GridLayout gridLayout= (GridLayout) findViewById(R.id.gridlayout);
         getValueButton= (Button) findViewById(R.id.getValueButto);
         setCheckAll= (Button) findViewById(R.id.setCheckAll);
         CheckBack= (Button) findViewById(R.id.setCheckBack);
@@ -44,6 +46,7 @@ public class CheckboxActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getValue(v);
+                gridLayout.setColumnCount(4);
             }
         });
        /* setCheckAll.setOnClickListener(new View.OnClickListener() {

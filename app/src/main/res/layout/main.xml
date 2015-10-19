@@ -39,6 +39,12 @@
             android:text="JAVA"
             android:textSize="20sp" />
     </RadioGroup>
+   <com.yaowen.radiogroupcheckbox.CheckboxGroup>
+       <CheckBox
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="wwfeef"/>
+   </com.yaowen.radiogroupcheckbox.CheckboxGroup>
     <Button
         android:id="@+id/nextPloblemButton"
         android:layout_width="wrap_content"
